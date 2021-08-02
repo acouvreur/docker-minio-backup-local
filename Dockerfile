@@ -9,14 +9,14 @@ RUN set -x \
   && chmod a+x /usr/local/bin/go-cron \
   && apt-get purge -y --auto-remove ca-certificates && apt-get clean
 
-ENV MINIO_DIR **None**
-ENV MINIO_BUCKET **None**
-ENV SCHEDULE '@daily'
-ENV BACKUP_DIR '/backups'
-ENV BACKUP_KEEP_DAYS 7
-ENV BACKUP_KEEP_WEEKS 4
-ENV BACKUP_KEEP_MONTHS 6
-ENV HEALTHCHECK_PORT 8080
+ENV MINIO_DIR=**None** \
+  MINIO_BUCKET=**None** \
+  SCHEDULE='@daily' \
+  BACKUP_DIR='/backups' \
+  BACKUP_KEEP_DAYS=7 \
+  BACKUP_KEEP_WEEKS=4 \
+  BACKUP_KEEP_MONTHS=6 \
+  HEALTHCHECK_PORT=8080
 
 COPY backup.sh /backup.sh
 
