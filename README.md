@@ -5,7 +5,7 @@
 Backup Minio buckets to the local filesystem with periodic rotating backups, based on [docker-postgres-backup-local](https://github.com/prodrigestivill/docker-postgres-backup-local).
 Backup multiple buckets from the same host by setting the bucket names in `MINIO_BUCKET` separated by commas or spaces.
 
-Supports the following Docker architectures: `linux/amd64`, `linux/arm64`, `linux/arm/v7`, `linux/s390x`, `linux/ppc64le`.
+Supports the following Docker architectures: `linux/amd64`, `linux/arm64/v8` and `linux/arm/v7`.
 
 ## Usage
 
