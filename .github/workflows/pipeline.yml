@@ -7,7 +7,7 @@ on:
       - master
 
 env:
-  DOCKER_REPOSITORY: acouvreur/mongo-backup-local
+  DOCKER_REPOSITORY: acouvreur/minio-backup-local
   CI: true
 
 jobs:
