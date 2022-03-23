@@ -28,7 +28,7 @@ for BUCKET in $(echo $MINIO_BUCKET | tr , " "); do
   # Create dump
   echo "Creating dump of ${BUCKET} bucket..."
   cd "$MINIO_DIR"
-  tar -cvzf "$DFILE" $BUCKET || echo "Warning: could not create a dump of ${BUCKET} bucket!" && continue
+  tar -cvzf "$DFILE" $BUCKET || echo "Warning: could not create a dump of ${BUCKET} bucket!"
   cd -
 
   # Copy (hardlink) for each entry
